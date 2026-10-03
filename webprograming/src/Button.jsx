@@ -1,9 +1,10 @@
 // Button.jsx
 
-export function PrimaryButton(){
-    return <button className="btn-primary">Simpan</button>;
+export function PrimaryButton({ label }){
+    return <button className="btn-primary">{label}</button>;
 }
 
-export function DangerButton(){
-    return <button className="btn-danger">Hapus</button>;
+export function DangerButton({ label }){
+    return <button className="btn-danger">{label}</button>;
 }
+

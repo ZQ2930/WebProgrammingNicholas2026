@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, Component } from 'react'
 import Navbar from './Components/Navbar'
 import { PrimaryButton, DangerButton } from './Button'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import CardClass from './Components/Card'
+import Salam from './Components/Salam'
+import Counter from './Components/Counter'
 
 /* 
 import heroImg from './assets/hero.png'
@@ -11,8 +13,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 */
 import './App.css'
-import { Component } from 'react'
-
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,16 +22,29 @@ function App() {
       <Navbar />
         <p>
           ini adalah button Primary
-          <PrimaryButton />
+          <PrimaryButton label="simpan" />
         </p>
         <p>
           Ini adalah button Danger
-          <DangerButton />
+          <DangerButton label="hapus" />
         </p>
+
       <div className="container">
         <Header />
+
+        <HeaderClass />
+
+        <Salam />
+
         <main>
           <p>Selamat datang di dashboard pengelolaan keuangan!</p>
+
+          <CardClass 
+            nama = "Budi" 
+            pekerjaan = "mahasiswa"
+          />
+          
+          <Counter />
         </main>
         <Footer />
       </div>
@@ -41,24 +54,9 @@ function App() {
 export default App
 
 
-/*
-class HeaderClass extends React.Component {
+
+class HeaderClass extends Component {
   render() {
     return <header><h1>Selamat Datang di React (Class)</h1></header>
   }
 }
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <HeaderClass />
-        <p>Ini Dibuat menggunakan Class Component dalam 1 file.</p>
-        <div>
-        <CardClass />
-        </div>
-      </div>
-    );
-  }
-}
-
