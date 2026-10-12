@@ -6,12 +6,8 @@ import Footer from './Components/Footer'
 import CardClass from './Components/Card'
 import Salam from './Components/Salam'
 import Counter from './Components/Counter'
-
-/* 
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-*/
+import TombolAksi from './Components/TombolAksi'
+import TombolClass from './Components/TombolClass'
 import './App.css'
 
 function App() {
@@ -36,12 +32,16 @@ function App() {
 
         <Salam />
 
+        <TombolAksi />
+
+        <TombolClass nama = "Nicholas" />
+
         <main>
           <p>Selamat datang di dashboard pengelolaan keuangan!</p>
 
           <CardClass 
-            nama = "Budi" 
-            pekerjaan = "mahasiswa"
+            nama = "Nicholas" 
+            pekerjaan = "Mahasiswa"
           />
           
           <Counter />
